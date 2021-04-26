@@ -23,5 +23,5 @@ for (let receita of receitas){
         const recipeId = receita.getAttribute('id');
         window.location.href = `/details?id=${recipeId}`
     })
-}
+} 
 // ----- modal e paginação details *----//
