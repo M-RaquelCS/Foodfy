@@ -1,0 +1,74 @@
+{% extends "layout.njk" %}
+
+{% block style %}
+    <link rel="stylesheet" href="/detailsRecipe.css">
+{% endblock style %}
+
+{% block title %}
+    <title>Foodfy | Details Recipe</title>
+{% endblock title %}
+
+{% block mainBody %}
+<div class="main-body">
+    <div class="main-body-content">
+        <header>
+            <a href="/"><img src="/assets/logo.png" alt="logo Foodfy"></a>
+            <nav>
+                <a href="/about">Sobre</a>
+                <a href="/recipes">Receitas</a>
+            </nav>
+        </header>
+
+        <main>
+            <div class="detailsTitle">
+                <img src={{ recipe.image }} alt="initial Chef">
+                <div class='title'>
+                    <h1>{{ recipe.title }}</h1>
+                    <p>por {{ recipe.author }}</p>
+                </div>
+            </div>
+            <div class="detailsText">
+                <div class="topic">
+                    <div class="titleStages">
+                        <p>Ingredientes</p>
+                        <button class='handleShowHiddenList'>ESCONDER</button>
+                    </div>
+                    <div id="listStages" class='listStage1'>
+                        <ul>
+                            {% for ingredient in recipe.ingredients%}
+                                <li>{{ingredient}}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="topic">
+                    <div class="titleStages">
+                        <p>Modo de Preparo</p>
+                        <button class='handleShowHiddenList2'>ESCONDER</button>
+                    </div>
+                    <div id="listStages" class='listStage2'>
+                        <ul>
+                            {% for stagePreparation in recipe.preparation%}
+                                <li>{{stagePreparation}}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="topic">
+                    <div class="titleStages">
+                        <p>Informações Adicionais</p>
+                        <button class='handleShowHiddenList3'>ESCONDER</button>
+                    </div>
+                    <div class="paragrafStage">
+                        <p>{{recipe.information}}</p>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+</div>
+{% endblock mainBody %}
+{% block script %}
+    <script src="/scripts/scriptHidden.js"></script>
+{% endblock script %}

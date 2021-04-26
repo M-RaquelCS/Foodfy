@@ -1,0 +1,86 @@
+:root{
+    --pink: #FBDFDB;
+    --grey-footer: #EEEEEE;
+    --background: #f2f3f5;
+
+    --gray-font: #777777;
+    --black-font: #111111;
+    --gray: #999999;
+    --text-gray: #444444;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box ;
+}
+
+body{
+    background: var(--background);
+}
+
+body, button{
+    font-family: 'Roboto', sans-serif;
+}
+
+button{
+    cursor: pointer;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+/* corpo da aplicação */
+.main-body{
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding-bottom: 100px;
+}
+/* corpo da aplicação */
+
+/* header */
+header{
+    padding: 2rem 0;
+
+    display: flex;
+    align-items: center;
+}
+header nav{
+    margin-left: 7.6rem;
+}
+header nav a + a{
+    margin-left: 1.8rem;
+}
+header .clicked{
+    font-weight: bold;
+}
+/* header */
+
+/* footer */
+footer{
+    background:var(--grey-footer);
+
+    display: flex;
+
+    position: fixed;
+    
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 62px;
+
+    /*margin-top: 50px;*/
+}
+
+footer p{
+    color: var(--gray);
+    font-size: 14px;
+    margin: auto;
+}
+/* footer */

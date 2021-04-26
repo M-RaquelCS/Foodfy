@@ -1,0 +1,62 @@
+/* as melhores receitas */
+.bestRecipes-container{
+    background: var(--pink);
+
+    padding: 2rem 4rem 0;
+    border-radius: 1.8rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.bestRecipes-container p {
+    opacity: 0.7;
+    max-width: 300px;
+
+    font-size: 1rem;
+    line-height: 28px;
+
+    margin-top: .6rem;
+}
+.bestRecipes-container > img{
+    margin-left: 10rem;
+}
+/* as melhores receitas */
+
+/* receitas mais acessadas */
+.recipesMostAccessed-container{
+    margin-top: 3.1rem;
+}
+
+.recipesMostAccessed-container .recipes{
+    margin-top: 1.2rem;
+}
+/* receitas mais acessadas */
+
+/* grid-receitas */
+/* .recipes{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+
+} */
+/* grid-receitas */
+
+ /* card-receitas */
+/* .recipe > img{
+    width: 300px;
+    border-radius: 15px;
+}
+.text-recipe{
+    margin-top: 20px;
+}
+.text-recipe p{
+    font-size: 1.1rem;
+    color: var(--black-font);
+}
+
+.text-recipe p small{
+    font-size: .8rem;
+    color: var(--gray-font);
+} */
+/* card-receitas */

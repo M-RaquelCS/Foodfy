@@ -1,0 +1,33 @@
+/* grid-receitas */
+.recipes{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+
+}
+/* grid-receitas */
+
+ /* card-receitas */
+ .recipe{
+     cursor: pointer;
+ }
+.recipe > img{
+    width: 100%;
+    max-width: 300px;
+    
+    height: 140px;
+    border-radius: 15px;
+}
+.text-recipe{
+    margin-top: 20px;
+}
+.text-recipe p{
+    font-size: 1.1rem;
+    color: var(--black-font);
+}
+
+.text-recipe p small{
+    font-size: .8rem;
+    color: var(--gray-font);
+}
+/* card-receitas */

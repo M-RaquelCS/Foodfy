@@ -1,0 +1,39 @@
+{% extends "layout.njk" %}
+
+{% block title %}
+    <title>Foodfy | Recipes</title>
+{% endblock title %}
+
+{% block mainBody %}
+    <div class="main-body">
+        <div class="main-body-content">
+            <header>
+                <a href="/"><img src="assets/logo.png" alt="logo Foodfy"></a>
+                <nav>
+                    <a href="/about">Sobre</a>
+                    <a href="/recipes" class="clicked">Receitas</a>
+                </nav>
+            </header>
+    
+            <main>
+                <div class="recipesMostAccessed-container">
+                    
+                    <section class="recipes">
+                        {% for dataRecipe in dataRecipes %}
+                            <div class="recipe"  id={{dataRecipes.indexOf(dataRecipe)}}>
+                                <img src='{{dataRecipe.image}}' alt="img recipe">
+                                <div class="text-recipe">
+                                    <p>{{ dataRecipe.title }}</p>
+                                    <p><small>por {{ dataRecipe.author }}</small></p>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </section>
+                </div>
+            </main>
+        </div>
+    </div>
+{% endblock mainBody %}
+{% block script %}
+    <script src="/scripts/scripts.js"></script>
+{% endblock script %}
